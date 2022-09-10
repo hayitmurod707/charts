@@ -71,6 +71,7 @@ const StackedAreaChart = ({ data, keys }) => {
 					<defs>
 						{keys?.map(({ fill }, index) => (
 							<linearGradient
+								key={index}
 								id={`${uniqueId}${index}`}
 								x1="0"
 								x2="0"
@@ -92,7 +93,7 @@ const StackedAreaChart = ({ data, keys }) => {
 							dataKey={key}
 							fill={`url(#${uniqueId}${index})`}
 							key={index}
-							stroke={false}
+							stroke="none"
 							type="monotone"
 						/>
 					))}
